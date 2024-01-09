@@ -1,0 +1,25 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven {
+            //配置本地插件目录
+            url uri('./plugin')
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            //配置本地插件目录
+            url uri('./plugin')
+        }
+    }
+}
+rootProject.name = "LearnAsmDemo"
+include ':app'
+include ':asmplugin'
